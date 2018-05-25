@@ -1,0 +1,59 @@
+{
+  "@@locale" :   "ar" ,
+  "@@last_modified": "2018-05-20T17:16:46.997414",
+  "username": "اسم المستخدم",
+  "@username": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "not_valid_username": "اسم المستخدم غير صحيح",
+  "@not_valid_username": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "password": "كلمة المرور",
+  "@password": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "password_is_too_short": "كلمة المرور غير صحيحه",
+  "@password_is_too_short": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "تسجيل الدخول",
+  "@login": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "language": "English",
+  "@language": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "links": "الروابط",
+  "@links": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "contacts": "جهات الاتصال",
+  "@contacts": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "attendance": "الحضور",
+  "@attendance": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "support": "الدعم",
+  "@support": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "profile": "الملف الشخصي",
+  "@profile": {
+    "type": "text",
+    "placeholders": {}
+  }
+}
