@@ -22,11 +22,12 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    //direction = TextDirection.rtl;
+
     _localeOverrideDelegate =
         new SpecifiedLocalizationDelegate(const Locale("ar", ""));
   }
 
+  // onLocaleChange Interface implementation
   onLocaleChange(Locale l, TextDirection textDirection) {
     setState(() {
       _localeOverrideDelegate = new SpecifiedLocalizationDelegate(l);
