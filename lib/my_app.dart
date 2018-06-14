@@ -6,12 +6,7 @@ import 'package:scoped_example/style.dart';
 import 'package:scoped_example/translation.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => new _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScopedModelDescendant<AppModel>(
