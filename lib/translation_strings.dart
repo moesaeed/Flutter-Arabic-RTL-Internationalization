@@ -7,7 +7,9 @@ import 'package:scoped_example/I10n/messages_all.dart';
 class Translations {
   static Future<Translations> load(Locale locale) {
     final String name =
-        locale.countryCode.isEmpty ? locale.languageCode : locale.toString();
+        (locale.countryCode != null && locale.countryCode.isEmpty)
+            ? locale.languageCode
+            : locale.toString();
     final String localeName = Intl.canonicalizedLocale(name);
 
     return initializeMessages(localeName).then((dynamic _) {

@@ -16,20 +16,3 @@ class TranslationsDelegate extends LocalizationsDelegate<Translations> {
   @override
   bool shouldReload(TranslationsDelegate old) => false;
 }
-
-class SpecifiedLocalizationDelegate
-    extends LocalizationsDelegate<Translations> {
-  final Locale overriddenLocale;
-
-  const SpecifiedLocalizationDelegate(this.overriddenLocale);
-
-  @override
-  bool isSupported(Locale locale) => overriddenLocale != null;
-
-  @override
-  Future<Translations> load(Locale locale) =>
-      Translations.load(overriddenLocale);
-
-  @override
-  bool shouldReload(SpecifiedLocalizationDelegate old) => true;
-}

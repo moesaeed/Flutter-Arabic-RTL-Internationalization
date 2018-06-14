@@ -10,19 +10,14 @@ class ScopeModelWrapper extends StatelessWidget {
 }
 
 class AppModel extends Model {
-  TextDirection _textDirection = TextDirection.rtl;
-  TextDirection get textDirection => _textDirection ?? TextDirection.rtl;
-
-  String _locale = "ar";
-  String get locale => _locale ?? "ar";
+  Locale _appLocale = Locale('ar');
+  Locale get appLocal => _appLocale ?? Locale("ar");
 
   void changeDirection() {
-    if (_textDirection == TextDirection.rtl) {
-      _textDirection = TextDirection.ltr;
-      _locale = "en";
+    if (_appLocale == Locale("ar")) {
+      _appLocale = Locale("en");
     } else {
-      _textDirection = TextDirection.rtl;
-      _locale = "ar";
+      _appLocale = Locale("ar");
     }
     notifyListeners();
   }
