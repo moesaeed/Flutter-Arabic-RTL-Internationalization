@@ -7,13 +7,14 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Container(
+      child: SingleChildScrollView(
         padding: EdgeInsets.all(8.0),
-        color: Colors.white,
+        //color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            const SizedBox(height: 250.0),
             TextFormField(
               decoration: InputDecoration(
                 labelText: Translations.of(context).username,
@@ -24,7 +25,18 @@ class Login extends StatelessWidget {
                   ? null
                   : Translations.of(context).not_valid_username,
             ),
-            const SizedBox(height: 50.0),
+            const SizedBox(height: 250.0),
+            TextFormField(
+              scrollPadding: EdgeInsets.all(40.0),
+              decoration: InputDecoration(
+                labelText: Translations.of(context).password,
+              ),
+              obscureText: true,
+              validator: (val) => val.contains("@")
+                  ? null
+                  : Translations.of(context).not_valid_username,
+            ),
+            const SizedBox(height: 250.0),
             ScopedModelDescendant<AppModel>(
                 builder: (context, child, model) => MaterialButton(
                       onPressed: () {
